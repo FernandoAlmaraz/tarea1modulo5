@@ -40,7 +40,8 @@ docker pull mariadb
 ## 🔹 Redis
 
 docker pull redis
-
+📷 Evidencia:
+![alt text](image.png)
 ---
 
 # 3️⃣ Verificación de Imágenes Descargadas
