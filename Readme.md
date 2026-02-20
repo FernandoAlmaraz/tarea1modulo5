@@ -8,7 +8,7 @@ Descargar y ejecutar tres contenedores diferentes utilizando imágenes oficiales
 
 # 1️⃣ Verificación de Docker
 
-Antes de comenzar, se verificó que Docker estuviera correctamente instalado y funcionando en el sistema.
+Se verificó que Docker estuviera correctamente instalado y funcionando.
 
 📷 Evidencia:
 ![Comprobando Docker](comprobando-docker.png)
@@ -17,10 +17,7 @@ Antes de comenzar, se verificó que Docker estuviera correctamente instalado y f
 
 # 2️⃣ Descarga de Imágenes (Pull)
 
-Se descargaron imágenes oficiales desde Docker Hub:
-
 ## 🔹 PostgreSQL
-
 docker pull postgres
 
 📷 Evidencia:
@@ -29,7 +26,6 @@ docker pull postgres
 ---
 
 ## 🔹 MariaDB
-
 docker pull mariadb
 
 📷 Evidencia:
@@ -38,10 +34,9 @@ docker pull mariadb
 ---
 
 ## 🔹 Redis
-
 docker pull redis
 📷 Evidencia:
-![alt text](image.png)
+![Docker PS -a](image.png)
 ---
 
 # 3️⃣ Verificación de Imágenes Descargadas
@@ -56,7 +51,6 @@ docker images
 # 4️⃣ Ejecución de Contenedores (Run)
 
 ## 🔹 PostgreSQL
-
 docker run -d --name contenedor-postgres -e POSTGRES_PASSWORD=123456 -p 5432:5432 postgres
 
 📷 Evidencia:
@@ -65,7 +59,6 @@ docker run -d --name contenedor-postgres -e POSTGRES_PASSWORD=123456 -p 5432:543
 ---
 
 ## 🔹 MariaDB
-
 docker run -d --name contenedor-mariadb -e MARIADB_ROOT_PASSWORD=123456 -p 3306:3306 mariadb
 
 📷 Evidencia:
@@ -74,7 +67,6 @@ docker run -d --name contenedor-mariadb -e MARIADB_ROOT_PASSWORD=123456 -p 3306:
 ---
 
 ## 🔹 Redis
-
 docker run -d --name contenedor-redis -p 6379:6379 redis
 
 📷 Evidencia:
@@ -91,7 +83,18 @@ docker ps
 
 ---
 
-# 6️⃣ Verificación de Todos los Contenedores
+# 6️⃣ Prueba de Conexión a PostgreSQL
+
+Se realizó una prueba de conexión al contenedor de PostgreSQL para verificar su correcto funcionamiento.
+
+La conexión se realizó utilizando el usuario `postgres` y la contraseña definida en el momento de ejecutar el contenedor.
+
+📷 Evidencia:
+![Test Conexión PostgreSQL](image-postgres.png)
+
+---
+
+# 7️⃣ Verificación de Todos los Contenedores
 
 docker ps -a
 
@@ -100,9 +103,7 @@ docker ps -a
 
 ---
 
-# 7️⃣ Detención de Contenedores
-
-Se detuvieron los contenedores utilizando las primeras tres letras del ID:
+# 8️⃣ Detención de Contenedores
 
 docker stop 22b  
 docker stop a7e  
@@ -113,7 +114,7 @@ docker stop 7eb
 
 ---
 
-# 8️⃣ Eliminación de Contenedores
+# 9️⃣ Eliminación de Contenedores
 
 docker rm 22b  
 docker rm a7e  
@@ -124,7 +125,7 @@ docker rm 7eb
 
 ---
 
-# 9️⃣ Eliminación de Imágenes
+# 🔟 Eliminación de Imágenes
 
 docker rmi postgres  
 docker rmi mariadb  
@@ -135,20 +136,20 @@ docker rmi redis
 
 ---
 
-# 🔎 Descripción de los Contenedores Utilizados
+# 🔎 Descripción de los Contenedores
 
 ### PostgreSQL
-Sistema de gestión de bases de datos relacional de código abierto, ampliamente utilizado en aplicaciones empresariales.
+Sistema gestor de base de datos relacional de código abierto utilizado para almacenamiento estructurado de información.
 
 ### MariaDB
-Sistema gestor de bases de datos relacional derivado de MySQL, utilizado en aplicaciones web y servidores.
+Sistema gestor de base de datos relacional derivado de MySQL, ampliamente utilizado en aplicaciones web.
 
 ### Redis
-Base de datos en memoria orientada a clave-valor, utilizada principalmente como sistema de caché y almacenamiento rápido.
+Base de datos en memoria orientada a clave-valor utilizada principalmente como sistema de caché.
 
 ---
 
 # ✅ Conclusión
 
-Se logró descargar, ejecutar, verificar, detener y eliminar correctamente tres contenedores utilizando imágenes oficiales de Docker Hub.  
-Las capturas demuestran el funcionamiento adecuado de cada etapa del proceso.
+Se descargaron, ejecutaron y verificaron correctamente tres contenedores utilizando imágenes oficiales de Docker Hub.  
+Se comprobó la conectividad a PostgreSQL y posteriormente se detuvieron y eliminaron tanto los contenedores como las imágenes.
