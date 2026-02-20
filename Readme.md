@@ -1,16 +1,3 @@
-![alt text](image-postgres.png)
-![alt text](image-mariadb.png)
-![alt text](image-redis.png)
-![alt text](docker-images.png)
-![alt text](docker-run-postgres.png)
-![alt text](docker-run-mariadb.png)
-![alt text](docker-run-redis.png)
-![alt text](docker-ps.png)
-![alt text](test-coneccion.png)
-![alt text](docker-stop.png)
-![alt text](docker-rm.png)
-![alt text](docker-rmi.png)
-
 # Práctica: Gestión de Contenedores con Docker
 
 ## 📌 Objetivo
@@ -38,7 +25,7 @@ docker pull mariadb
 docker pull redis  
 
 📷 Evidencia:
-- docker-images.png
+- ![alt text](docker-images.png)
 
 ---
 
@@ -55,8 +42,8 @@ Explicación:
 - `-p 5432:5432` expone el puerto del contenedor al host.
 
 📷 Evidencia:
-- docker-run-postgres.png
-- image-postgres.png
+![alt text](image-postgres.png)
+![alt text](docker-run-postgres.png)
 
 ---
 
@@ -69,8 +56,9 @@ Explicación:
 - Se expone el puerto 3306 para conexiones externas.
 
 📷 Evidencia:
-- docker-run-mariadb.png
-- image-mariadb.png
+
+![alt text](docker-run-mariadb.png)
+![alt text](image-mariadb.png)
 
 ---
 
@@ -83,8 +71,8 @@ Explicación:
 - Se expone el puerto 6379.
 
 📷 Evidencia:
-- docker-run-redis.png
-- image-redis.png
+![alt text](image-redis.png)
+![alt text](docker-run-redis.png)
 
 ---
 
@@ -96,12 +84,12 @@ docker ps
 docker ps -a  
 
 📷 Evidencia:
-- docker-ps.png
+![alt text](docker-ps.png)
 
 También se verificó la conexión a la base de datos.
 
 📷 Evidencia:
-- test-coneccion.png
+![alt text](test-coneccion.png)
 
 ---
 
@@ -114,7 +102,7 @@ docker stop a7e
 docker stop 7eb  
 
 📷 Evidencia:
-- docker-stop.png
+![alt text](docker-stop.png)
 
 ---
 
@@ -125,7 +113,7 @@ docker rm a7e
 docker rm 7eb  
 
 📷 Evidencia:
-- docker-rm.png
+![alt text](docker-rm.png)
 
 ---
 
@@ -136,7 +124,7 @@ docker rmi mariadb
 docker rmi redis  
 
 📷 Evidencia:
-- docker-rmi.png
+![alt text](docker-rmi.png)
 
 ---
 
