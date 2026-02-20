@@ -90,7 +90,7 @@ Se realizó una prueba de conexión al contenedor de PostgreSQL para verificar s
 La conexión se realizó utilizando el usuario `postgres` y la contraseña definida en el momento de ejecutar el contenedor.
 
 📷 Evidencia:
-![Test Conexión PostgreSQL](image-postgres.png)
+![Test Conexión PostgreSQL](test-conn.png)
 
 ---
 
